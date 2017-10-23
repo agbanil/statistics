@@ -1,0 +1,13 @@
+version: '2'
+services:
+    web:
+        build: .
+        image: statistics
+        container_name: statistics_web_app
+        volumes:
+            - .:/src
+            - ./docker_logs/statistics_service:/var/log/applications/statistics_service
+        ports:
+            - 8080
+        env_file:
+            - ./.env
