@@ -16,15 +16,15 @@ class StatisticsService extends ResourceService {
         super(logger);
     }
 
-     /** Get country by code
-     *
-     * @returns {*}
+     /**
+     * Get Statistics for the last one minute
+     * @returns {Promise}
      */
     get() {
         let reqId = shortid.generate();
         let stringifiedArray = JSON.stringify(ResourceService.transactions);
         this.logger.info(`Request ID: ${reqId} - Get statistics called, filtering array ${stringifiedArray}`);
-        return this.filterArray(ResourceService.transactions)
+        return this.filterArray()
             .then((arrayToWorkWith) => {
                 this.logger.info(`Request ID: ${reqId} - Array filtered ${JSON.stringify(arrayToWorkWith)}`);
                 let sum = 0;

@@ -32,7 +32,7 @@ class TransactionService extends ResourceService {
                 this.logger.info(`Request ID: ${reqId} - Transaction is valid. Logging it...`);
                 ResourceService.transactions.push(data);
                 let stringifiedArray = JSON.stringify(ResourceService.transactions);
-                this.logger.info(`Request ID: ${reqId} - Array before filer ${stringifiedArray}`);
+                this.logger.info(`Request ID: ${reqId} - Array before filter ${stringifiedArray}`);
                 return this.filterArray();
             })
             .then((filteredArray) => {
