@@ -7,9 +7,6 @@ class ResourceService {
      * make a call to the super constructor
      *
      * @param logger
-     * @param metrics
-     * @param cache
-     * @param key Unique key for resource, usually snake_case singular name of the resource
      */
     constructor(logger) {
         this.logger = logger;

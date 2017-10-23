@@ -1,6 +1,6 @@
 'use strict';
 
-const appName = 'recipeservice';
+const appName = 'statisticsservice';
 const config = {
     appName: appName,
     webserver: {
