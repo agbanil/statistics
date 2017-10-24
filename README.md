@@ -53,4 +53,19 @@ Base URL : `http://localhost:32801/v1`
 | GET stats   | `GET`       | `/statistics`           |
 | Add transactions   | `POST`      | `/transactions`           |
 
+## Technologies used
+### Node.js
+This project was built using nodejs with restify. The use case needed a lightweight non-blocking endpoint, and looking at how quickly I could bootstrap, I decided to go with nodejs. Bear in mind that this could have also been seemless with GOland, Java, PHP, etc.
 
+### Restify
+I could have used bare node but decided to go with restify here because of its load management and concurrency. Restify also keeps connections alive which removes the overhead of creating a connection each time when getting called from the same client.
+
+### Docker
+I know it's an overkill at some point but I wanted something that can be run without pain and isn't dependent on what version of what is installed on the local machine. There would have been no need to finish this if it cannot be run.
+
+## Project Structure
+.   
+├── app       
+├── bin                                        
+├── tests       
+└── README.md
